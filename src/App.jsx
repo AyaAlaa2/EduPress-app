@@ -1,9 +1,10 @@
 import React from "react";
-import { Button } from "@/components/ui/button";
+import HomePage from "./components/homePage/HomePage";
 
 const App = () => {
   return (
     <>
+      <HomePage />
     </>
   );
 };
