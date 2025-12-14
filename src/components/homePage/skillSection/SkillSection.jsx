@@ -5,11 +5,11 @@ import { Button } from "@/components/ui/button";
 
 const SkillSection = () => {
   return (
-    <div className="flex items-center justify-center gap-[125px]">
+    <div className="flex flex-col md:flex-row items-center justify-center gap-[125px] px-[50px] md:px-0">
       <div>
         <img src={skillBackground} alt="skillBackground image" />
       </div>
-      <div className="py-[42.5px] flex flex-col gap-6 items-start justify-start w-[50%]">
+      <div className="py-[42.5px] flex flex-col gap-6 items-start justify-start w-full md:w-[50%]">
         <p className="font-[Exo] font-semibold text-[32px] leading-[150%]">
           Grow us your skill with LearnPress LMS
         </p>
