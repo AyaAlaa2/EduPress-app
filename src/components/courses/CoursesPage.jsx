@@ -1,14 +1,14 @@
 import React from "react";
 import CourseList from "./CourseList";
-import SidebarCourses from "./Sidebar/SidebarCourses";
-import { courses } from "../Data/data";
-import HeaderOfLists from "../Hooks/HeaderOfLists";
+import SidebarCourses from "./sidebar/SidebarCourses";
+import { courses } from "../data/data";
+import HeaderOfLists from "../hooks/HeaderOfLists";
 import { UseSearchPagination } from "../hooks/useSearchPagination";
 import { UseCourseFilters } from "../hooks/useCourseFilters";
 import { Pagination } from "@mantine/core";
+import BreadCrumb from "../hooks/BreadCrumb";
 
 const CoursesPage = () => {
-  // 1) all filter state + filtered list from the hook
   const {
     filteredCourses,
     selectedCategories,
@@ -36,12 +36,13 @@ const CoursesPage = () => {
     searchKeys: ["title", "category", "instructor"],
   });
 
-  // optional debug:
-  // console.log("filters:", { priceFilter, minRating, selectedCategories });
-  // console.log("filtered len:", filteredCourses.length);
+  const href = [{ title: "Homepage", href: "/" }, { title: "Courses" }];
 
   return (
     <div className="min-h-screen bg-muted/40">
+      <BreadCrumb
+        href={href}
+      />
       <div className="max-w-6xl mx-auto px-4 lg:px-6 py-8">
         <HeaderOfLists
           title="All Courses"

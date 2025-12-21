@@ -4,15 +4,25 @@ import BlogPage from "./components/blog/BlogPage";
 import BlogDetailsPage from "./components/blogDetailes/BlogDetailsPage";
 import HomePage from "./components/homePage/HomePage";
 import CoursesPage from "./components/courses/CoursesPage";
+import CourseDetailesPage from "./components/courseDetailes/CourseDetailesPage";
+import Error from "./components/Error";
+import FAQPage from "./components/faq/FAQPage";
+import ScrollToTop from "./components/ScrollToTop";
 
 const App = () => {
   return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/blog" element={<BlogPage />} />
-      <Route path="/blog/:slug" element={<BlogDetailsPage />} />
-      <Route path="/courses" element={<CoursesPage />} />
-    </Routes>
+    <>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/blog" element={<BlogPage />} />
+        <Route path="/blog/:slug" element={<BlogDetailsPage />} />
+        <Route path="/courses" element={<CoursesPage />} />
+        <Route path="/course/:courseId" element={<CourseDetailesPage />} />
+        <Route path="/faq" element={<FAQPage />} />
+        <Route path="*" element={<Error />} />
+      </Routes>
+    </>
   );
 };
 

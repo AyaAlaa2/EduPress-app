@@ -4,6 +4,7 @@ import { posts, categories, tags, recentPosts } from "../data/data";
 import HeaderOfLists from "../hooks/HeaderOfLists";
 import { UseSearchPagination } from "../hooks/useSearchPagination";
 import { Pagination } from "@mantine/core";
+import BreadCrumb from "../hooks/BreadCrumb";
 
 const BlogPage = () => {
   const {
@@ -17,8 +18,11 @@ const BlogPage = () => {
     itemsPerPage: 5,
     searchKeys: ["title", "excerpt", "category"],
   });
+
+  const href = [{ title: "Homepage", href: "/" }, { title: "Blog" }];
   return (
-    <div className="min-h-screen bg-muted/40">
+    <div className="min-h-screen">
+      <BreadCrumb href={href} />
       <div className="max-w-6xl mx-auto px-4 lg:px-6 py-8">
         <HeaderOfLists
           title="All Articles"
@@ -40,7 +44,7 @@ const BlogPage = () => {
                 size="md"
                 radius="xl"
                 withControls
-                color="orange"
+                color="black"
                 className="select-none"
               />
             </div>
