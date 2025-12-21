@@ -8,6 +8,7 @@ import CourseDetailesPage from "./components/courseDetailes/CourseDetailesPage";
 import Error from "./components/Error";
 import FAQPage from "./components/faq/FAQPage";
 import ScrollToTop from "./components/ScrollToTop";
+import ContactUs from "./components/contactUs/ContactUs";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="/courses" element={<CoursesPage />} />
         <Route path="/course/:courseId" element={<CourseDetailesPage />} />
         <Route path="/faq" element={<FAQPage />} />
+        <Route path="/contactUs" element={<ContactUs />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </>

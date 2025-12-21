@@ -2,14 +2,18 @@ import React from "react";
 import { faqs } from "../data/data";
 import VectorImg from "../assets/img/FaqVector.png";
 import FaqColumnAccordion from "./FaqColumnAccordion";
+import BreadCrumb from "../hooks/BreadCrumb";
 
 const FAQPage = () => {
   const leftFaqs = faqs.filter((_, i) => i % 2 === 0);
   const rightFaqs = faqs.filter((_, i) => i % 2 === 1);
+  const href = [{ title: "Homepage", href: "/" }, { title: "FAQ" }];
 
   return (
     <div className="min-h-screen bg-white">
-      <div className="max-w-6xl mx-auto px-4 py-12">
+      <BreadCrumb href={href} />
+
+      <div className="max-w-5xl mx-auto px-4 py-12">
         <h1 className="text-3xl font-bold mb-10">FAQs</h1>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
