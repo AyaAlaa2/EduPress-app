@@ -37,31 +37,31 @@ const SecondCourseCard = ({ course }) => {
               {course.title}
             </h3>
 
-            <div className="flex flex-wrap items-center gap-3 text-xs text-gray-500">
+            <div className="flex flex-wrap items-center gap-3 text-gray-500">
               <span className="flex items-center gap-1">
                 <img src={icon2} alt="icon2" />
-                <span className="text-[#555555] text-[16px]">
+                <span className="text-[#555555] text-[14px]">
                   {course.students} Students
                 </span>
               </span>
 
               <span className="flex items-center gap-1">
                 <img src={time} alt="icon2" />
-                <span className="text-[#555555] text-[16px]">
+                <span className="text-[#555555] text-[14px]">
                   {course.duration}
                 </span>
               </span>
 
               <span className="flex items-center gap-1">
                 <img src={icon3} alt="icon2" />
-                <span className="text-[#555555] text-[16px]">
+                <span className="text-[#555555] text-[14px]">
                   {course.level}
                 </span>
               </span>
 
               <span className="flex items-center gap-1">
                 <img src={icon4} alt="icon2" />
-                <span className="text-[#555555] text-[16px]">
+                <span className="text-[#555555] text-[14px]">
                   {course.lessons} Lessons
                 </span>
               </span>
