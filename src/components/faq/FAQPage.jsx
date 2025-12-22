@@ -21,7 +21,6 @@ const FAQPage = () => {
           <FaqColumnAccordion items={rightFaqs} prefix="right" />
         </div>
 
-        {/* Image – bottom left */}
         <div className="mt-16 flex md:justify-center lg:justify-start">
           <img
             src={VectorImg}

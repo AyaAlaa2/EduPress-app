@@ -9,11 +9,14 @@ import Error from "./components/Error";
 import FAQPage from "./components/faq/FAQPage";
 import ScrollToTop from "./components/ScrollToTop";
 import ContactUs from "./components/contactUs/ContactUs";
+import Header from "./components/header/Header.jsx";
+import Footer from "./components/footer/Footer";
 
 const App = () => {
   return (
     <>
       <ScrollToTop />
+      <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/blog" element={<BlogPage />} />
@@ -24,6 +27,7 @@ const App = () => {
         <Route path="/contactUs" element={<ContactUs />} />
         <Route path="*" element={<Error />} />
       </Routes>
+      <Footer />
     </>
   );
 };

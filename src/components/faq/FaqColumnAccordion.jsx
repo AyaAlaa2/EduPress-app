@@ -20,13 +20,13 @@ const FaqColumnAccordion = ({ items = [], prefix = "col" }) => {
             <AccordionTrigger
               className="
                 py-5 hover:no-underline
-                data-[state=open]:text-orange-500
+                data-[state=open]:text-primary
               "
             >
               <p className="font-[Exo] font-semibold">{item.question}</p>
             </AccordionTrigger>
 
-            <AccordionContent className="pb-5 text-[16px] text-[#555555] leading-relaxed">
+            <AccordionContent className="text-[16px] text-[#555555] leading-[150%]">
               {item.answer}
             </AccordionContent>
           </AccordionItem>

@@ -23,17 +23,15 @@ const BlogPage = () => {
   return (
     <div className="min-h-screen">
       <BreadCrumb href={href} />
-      <div className="max-w-6xl mx-auto px-4 lg:px-6 py-8">
-        <HeaderOfLists
-          title="All Articles"
-          searchPlaceholder="Search articles..."
-          searchValue={searchInput}
-          onSearchChange={handleSearchChange}
-        />
-
+      <div className="max-w-5xl mx-auto px-4 lg:px-6 py-8">
         <div className="flex flex-col lg:flex-row gap-10">
-          {/* LEFT: posts + pagination */}
-          <div className="w-full lg:w-2/3">
+          <div className="w-full lg:w-3/4">
+            <HeaderOfLists
+              title="All Articles"
+              searchPlaceholder="Search ..."
+              searchValue={searchInput}
+              onSearchChange={handleSearchChange}
+            />
             <BlogList posts={visiblePosts} />
 
             <div className="flex justify-center mt-6">
@@ -50,8 +48,7 @@ const BlogPage = () => {
             </div>
           </div>
 
-          {/* RIGHT: sidebar */}
-          <div className="w-full lg:w-1/3 lg:sticky lg:top-24 self-start">
+          <div className="w-full lg:w-1/4 lg:sticky lg:top-5 self-start">
             <SidebarBlog
               categories={categories}
               recentPosts={recentPosts}

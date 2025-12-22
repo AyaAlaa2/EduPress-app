@@ -2,31 +2,31 @@ import React from "react";
 const SidebarBlog = ({ categories, recentPosts, tags }) => {
   return (
     <aside className="space-y-8 text-sm">
-      {/* Category */}
       <section>
-        <h2 className="font-semibold mb-4">Category</h2>
+        <h2 className="font-[Exo] text-[20px] font-semibold mb-5">Category</h2>
 
-        <ul className="space-y-2">
+        <ul className="flex flex-col gap-[10px] items-start w-full">
           {categories.map((cat) => (
             <li
               key={cat.name}
-              className="flex items-center justify-between text-[13px] text-gray-700"
+              className="w-full flex items-center justify-between text-[#555555] text-[16px]"
             >
               <span>{cat.name}</span>
-              <span className="text-gray-400">{cat.count}</span>
+              <span>{cat.count}</span>
             </li>
           ))}
         </ul>
       </section>
 
-      {/* Recent Posts */}
       <section>
-        <h2 className="font-semibold mb-4">Recent Posts</h2>
+        <h2 className="font-[Exo] text-[20px] font-semibold mb-5">
+          Recent Posts
+        </h2>
 
         <ul className="space-y-4">
           {recentPosts.map((post) => (
             <li key={post.id} className="flex items-start gap-3">
-              <div className="w-14 h-14 overflow-hidden rounded-md flex-shrink-0">
+              <div className="w-[90px] h-[90px] overflow-hidden rounded-[12px] flex-shrink-0">
                 <img
                   src={post.image}
                   alt={post.title}
@@ -34,24 +34,18 @@ const SidebarBlog = ({ categories, recentPosts, tags }) => {
                 />
               </div>
 
-              <div className="text-[12px] leading-tight">
-                {/* First line (small grey) */}
+              <div className="text-[16px] font-medium">
                 <p className="text-gray-500">Best LearnPress</p>
-                {/* Second line (orange like your screenshot) */}
-                <p className="font-medium text-[#FF7A00]">WordPress Theme</p>
-                {/* Third line (black, bold) */}
-                <p className="font-semibold text-gray-900">
-                  Collection For 2023
-                </p>
+                <p>WordPress Theme</p>
+                <p>Collection For 2023</p>
               </div>
             </li>
           ))}
         </ul>
       </section>
 
-      {/* Tags */}
       <section>
-        <h2 className="font-semibold mb-4">Tags</h2>
+        <h2 className="font-[Exo] text-[20px] font-semibold mb-5">Tags</h2>
 
         <div className="flex flex-wrap gap-2">
           {tags.map((tag) => (

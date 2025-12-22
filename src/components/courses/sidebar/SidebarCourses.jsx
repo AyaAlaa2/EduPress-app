@@ -1,9 +1,9 @@
 import React from "react";
 import FilterCategory from "./FilterCategory";
 import FilterInstructors from "./FilterInstructors";
+import FilterLevel from "./FilterLevel";
 import FilterPrice from "./FilterPrice";
 import FilterReview from "./FilterReview";
-import FilterLevel from "./FilterLevel";
 
 const SidebarCourses = ({
   selectedCategories,

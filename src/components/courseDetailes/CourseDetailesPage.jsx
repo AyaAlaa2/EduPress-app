@@ -31,7 +31,7 @@ const CourseDetailesPage = () => {
 
   return (
     <div>
-      <div className="mx-auto py-8">
+      <div className="mx-auto">
         <BreadCrumb href={href} />
 
         <div className="flex flex-col gap-10 items-start justify-center">
