@@ -1,13 +1,17 @@
 import { Input } from "../ui/input";
 import search from "../courses/icons/search.svg";
 import filter from "../courses/icons/filter.svg";
+import filter2 from "../courses/icons/filter2.svg";
 import grid from "../courses/icons/grid.svg";
+import grid2 from "../courses/icons/grid2.svg";
 const HeaderOfLists = ({
   title,
   searchPlaceholder = "Search...",
   searchValue,
   onSearchChange,
   rightSlot,
+  changeGrid,
+  gridCount,
 }) => {
   return (
     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-6">
@@ -28,8 +32,21 @@ const HeaderOfLists = ({
             />
             <img src={search} alt="s" loading="lazy" />
           </div>
-          <img src={grid} alt="g" loading="lazy" />
-          <img src={filter} alt="f" loading="lazy" />
+          <button onClick={() => changeGrid(2)}>
+            {gridCount == 2 ? (
+              <img src={grid} alt="g" loading="lazy" />
+            ) : (
+              <img src={grid2} alt="g" loading="lazy" />
+            )}
+          </button>
+
+          <button onClick={() => changeGrid(1)}>
+            {gridCount == 1 ? (
+              <img src={filter2} alt="f" loading="lazy" />
+            ) : (
+              <img src={filter} alt="f" loading="lazy" />
+            )}
+          </button>
         </div>
       </div>
     </div>

@@ -5,6 +5,7 @@ import HeaderOfLists from "../hooks/HeaderOfLists";
 import { UseSearchPagination } from "../hooks/useSearchPagination";
 import { Pagination } from "@mantine/core";
 import BreadCrumb from "../hooks/BreadCrumb";
+import { useState } from "react";
 
 const BlogPage = () => {
   const {
@@ -18,6 +19,11 @@ const BlogPage = () => {
     itemsPerPage: 5,
     searchKeys: ["title", "excerpt", "category"],
   });
+  const [gridCount, setGridCount] = useState(2);
+
+  const changeGrid = (gridCol) => {
+    setGridCount(gridCol);
+  };
 
   const href = [{ title: "Homepage", href: "/" }, { title: "Blog" }];
   return (
@@ -31,8 +37,10 @@ const BlogPage = () => {
               searchPlaceholder="Search ..."
               searchValue={searchInput}
               onSearchChange={handleSearchChange}
+              changeGrid={changeGrid}
+              gridCount={gridCount}
             />
-            <BlogList posts={visiblePosts} />
+            <BlogList posts={visiblePosts} gridCount={gridCount} />
 
             <div className="flex justify-center mt-6">
               <Pagination

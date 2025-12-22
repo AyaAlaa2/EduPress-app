@@ -1,9 +1,9 @@
 import React from "react";
 import CourseCard from "./CourseCard";
 
-const CourseList = ({ courses }) => {
+const CourseList = ({ courses, gridCount }) => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+    <div className={`grid grid-cols-1 sm:grid-cols-${gridCount} gap-6`}>
       {courses.map((course) => (
         <CourseCard key={course.id} course={course} />
       ))}

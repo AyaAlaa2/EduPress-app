@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import CourseList from "./CourseList";
 import SidebarCourses from "./sidebar/SidebarCourses";
 import { courses } from "../data/data";
@@ -35,6 +35,12 @@ const CoursesPage = () => {
     searchKeys: ["title", "category", "instructor"],
   });
 
+  const [gridCount, setGridCount] = useState(2);
+
+  const changeGrid = (gridCol) => {
+    setGridCount(gridCol);
+  };
+
   const href = [{ title: "Homepage", href: "/" }, { title: "Courses" }];
 
   return (
@@ -48,8 +54,10 @@ const CoursesPage = () => {
               searchPlaceholder="Search ..."
               searchValue={searchInput}
               onSearchChange={handleSearchChange}
+              changeGrid={changeGrid}
+              gridCount={gridCount}
             />
-            <CourseList courses={visibleCourses} />
+            <CourseList courses={visibleCourses} gridCount={gridCount} />
 
             <div className="flex justify-center mt-6">
               <Pagination
