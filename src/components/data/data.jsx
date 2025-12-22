@@ -4087,6 +4087,8 @@ export const courses = [
   },
 ];
 
+export const featuredCourses = courses.slice(0, 6);
+
 export const courseCategories = [
   "Commercial",
   "Office",
