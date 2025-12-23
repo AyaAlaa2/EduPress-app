@@ -5,8 +5,8 @@ import { headerLinks } from "./headerLinks";
 
 const DesktopHeader = () => {
   return (
-    <div className="flex items-center gap-[40px]">
-      <nav className="hidden md:flex items-center text-[16px] font-semibold  font-[Exo]">
+    <div className="w-full flex items-center justify-between">
+      <nav className="hidden lg:flex items-center text-[16px] font-semibold  font-[Exo]">
         {headerLinks.map((link) => (
           <NavLink
             key={link.href}
@@ -22,8 +22,8 @@ const DesktopHeader = () => {
         ))}
       </nav>
 
-      <div className="hidden md:flex items-center gap-[20px]  ">
-        <button className="  hover:text-orange-500">
+      <div className="hidden lg:flex items-center gap-[20px]  ">
+        <button className=" hover:text-orange-500">
           <p className="font-medium text-[18px]">Login / Register</p>
         </button>
         <button>

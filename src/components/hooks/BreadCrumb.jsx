@@ -9,7 +9,7 @@ import {
 
 const BreadCrumb = ({ href }) => {
   return (
-    <Breadcrumb className="ps-5 md:ps-40 py-[18px] bg-[#F5F5F5]">
+    <Breadcrumb className="ps-6 sm:ps-10 md:ps-29 py-[18px] bg-[#F5F5F5]">
       <BreadcrumbList>
         {href.map((link, index) => (
           <React.Fragment key={link.title}>

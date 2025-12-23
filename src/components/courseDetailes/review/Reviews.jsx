@@ -23,7 +23,7 @@ const Reviews = ({ reviewsStats, reviewsList }) => {
 
   return (
     <div className="flex flex-col items-center justify-start w-full">
-      <div className="p-[30px] flex flex-col items-start w-full gap-[20px]">
+      <div className="p-[5px] flex flex-col items-start w-full gap-[20px]">
         <ReviewAvarage stars={stars} reviewsStats={reviewsStats} />
         <Separator />
         <Comments displayReviews={displayReviews} />

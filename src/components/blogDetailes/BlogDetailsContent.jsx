@@ -6,7 +6,9 @@ const BlogDetailsContent = ({ post }) => {
   return (
     <section className="flex flex-col gap-[40px]">
       <div className="flex flex-col gap-[10px] items-start">
-        <p className="text-[30px] font-semibold font-[Exo]">{post.title}</p>
+        <p className="text-[20px] md:text-[30px] font-semibold font-[Exo]">
+          {post.title}
+        </p>
 
         <div className="flex items-center gap-[24px]">
           <div className="flex items-center gap-[4px]">

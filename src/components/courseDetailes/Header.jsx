@@ -15,7 +15,7 @@ const Header = ({ course }) => {
   ];
 
   return (
-    <div className="bg-black flex items-start justify-start w-full py-[50px] px-[20px] md:px-[150px]">
+    <div className="bg-black flex items-start justify-start w-full py-[50px] px-[30px] sm:px-[40px] md:px-[85px] lg:px-[100px]">
       <div className="flex flex-col items-start justify-start gap-[20px]">
         <div className="flex gap-[20px] items-center">
           <p className="font-medium text-[12px] md:text-[16px] bg-[#555555] text-white rounded-[8px] py-[8px] px-[12px]">
@@ -30,13 +30,13 @@ const Header = ({ course }) => {
         </h1>
         <div className="flex items-center flex-wrap gap-[24px]">
           {courseInfo.map((info, index) => (
-            <div className="flex items-center gap-[8px] text-white">
-            <img src={info.icon} alt="icon" />
-            <p className="text-[#9D9D9D] text-[12px] md:text-[16px] leading-[150%] capitalize">
-              {info.value}
-            </p>
-          </div>
-          ))}     
+            <div className="flex items-center gap-[8px] text-white" key={index}>
+              <img src={info.icon} alt="icon" />
+              <p className="text-[#9D9D9D] text-[12px] md:text-[16px] leading-[150%] capitalize">
+                {info.value}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </div>

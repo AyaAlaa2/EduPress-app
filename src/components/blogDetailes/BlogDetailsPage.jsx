@@ -34,13 +34,12 @@ const BlogDetailsPage = () => {
   }
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen mt-16">
       <BreadCrumb href={href} />
 
       <div className="max-w-6xl mx-auto px-4 lg:px-6 py-8">
-        <div className="flex flex-col lg:flex-row gap-10 items-start">
-          {/* LEFT */}
-          <div className="w-full lg:flex-[3] space-y-8">
+        <div className="w-full flex flex-col lg:flex-row gap-10 items-start">
+          <div className="w-full lg:flex-[3] space-y-8 px-4 sm:px-10 md:px-25 lg:px-0">
             <BlogDetailsContent post={post} />
             <BlogPrevNext post={post} posts={posts} />
             <BlogDetailsComments comments={post.comments || []} />
@@ -48,10 +47,10 @@ const BlogDetailsPage = () => {
               title="Leave a Comment"
               subtitle="Your email address will not be published. Required fields are marked *"
               buttonText="Posts Comment"
+              className="px-1"
             />
           </div>
 
-          {/* RIGHT */}
           <div className="w-full lg:flex-[1] lg:max-w-xs lg:ml-auto lg:sticky lg:top-5">
             <SidebarBlog
               categories={categories}

@@ -7,7 +7,7 @@ import { NavLink } from "react-router-dom";
 const MobileHeader = () => {
   return (
     <Sheet>
-      <SheetTrigger className="md:hidden py-[24px]">
+      <SheetTrigger className="flex lg:hidden py-[24px]">
         <Menu size={24} />
       </SheetTrigger>
 

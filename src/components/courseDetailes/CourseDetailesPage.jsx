@@ -30,14 +30,14 @@ const CourseDetailesPage = () => {
   }
 
   return (
-    <div>
+    <div className="mt-16">
       <div className="mx-auto">
         <BreadCrumb href={href} />
 
         <div className="flex flex-col gap-10 items-start justify-center">
           <Header course={course} />
 
-          <div className="flex w-full md:w-[80%] mx-auto flex-col lg:flex-row gap-10 items-start justify-center px-[10px] md:px-[30px]">
+          <div className="flex w-full md:w-[90%] mx-auto flex-col lg:flex-row gap-10 items-start justify-center px-[25px] sm:px-[35px] md:px-[30px]">
             <div className="w-full flex items-center justify-center">
               <CourseTabs course={course} />
             </div>
@@ -45,6 +45,7 @@ const CourseDetailesPage = () => {
           <CommentForm
             title="Leave a Comment"
             subtitle="Your email address will not be published. Required fields are marked *"
+            className="px-8 md:px-0"
           />
         </div>
       </div>
