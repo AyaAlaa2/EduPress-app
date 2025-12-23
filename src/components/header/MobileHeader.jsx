@@ -11,7 +11,7 @@ const MobileHeader = () => {
         <Menu size={24} />
       </SheetTrigger>
 
-      <SheetContent side="right" className="w-[360px]">
+      <SheetContent side="right" className="w-full md:w-[360px]">
         <div className="flex flex-col text-[16px] font-semibold py-[48px] font-[Exo]">
           {headerLinks.map((link) => (
             <NavLink

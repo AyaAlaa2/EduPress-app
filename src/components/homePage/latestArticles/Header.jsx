@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 const Header = () => {
   return (
     <div className=" w-full flex flex-col sm:flex-row items-center justify-between gap-5">
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col gap-3 items-center">
         <p className="font-[Exo] font-semibold text-xl sm:text-2xl md:text-4xl">
           Latest Articles
         </p>

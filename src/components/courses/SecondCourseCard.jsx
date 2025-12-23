@@ -16,7 +16,7 @@ const SecondCourseCard = ({ course }) => {
   return (
     <div className="rounded-[20px] h-auto bg-white shadow-sm border overflow-hidden flex flex-col md:flex-row mb-6 group">
       <Link to={href} className="w-full flex flex-col md:flex-row">
-        <div className="relative w-full md:w-[260px] h-full">
+        <div className="relatived md:w-[260px] h-full">
           <img
             src={course.image}
             alt={course.title}
@@ -27,7 +27,7 @@ const SecondCourseCard = ({ course }) => {
           </Badge>
         </div>
 
-        <CardContent className="flex flex-col gap-[67px] p-4 sm:p-5 flex-1">
+        <CardContent className="flex flex-col gap-[10px] md:gap-[67px] p-4 sm:p-5 flex-1">
           <div className="flex flex-col items-start gap-[16px]">
             <p className="text-[14px] text-[#555555]">
               by <span className="text-[#000000] ">{course.instructor}</span>

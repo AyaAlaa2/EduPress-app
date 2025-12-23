@@ -5,16 +5,16 @@ import { Button } from "@/components/ui/button";
 
 const SkillSection = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center gap-[125px] px-[50px] md:px-0">
+    <div className="flex flex-col md:flex-row items-center justify-center gap-[30px] md:gap-[125px] px-[20px] md:px-0">
       <div>
         <img src={skillBackground} alt="skillBackground image" />
       </div>
       <div className="py-[42.5px] flex flex-col gap-6 items-start justify-start w-full md:w-[50%]">
-        <p className="font-[Exo] font-semibold text-[32px] leading-[150%]">
+        <p className="font-[Exo] font-semibold text-[16px] md:text-[32px] leading-[150%]">
           Grow us your skill with LearnPress LMS
         </p>
         <div className="flex flex-col gap-[16px] items-start ustify-start">
-          <p className="text-[#555555] text-[18px]">
+          <p className="text-[#555555] text-[16px] md:text-[18px]">
             We denounce with righteous indignation and dislike men who are so
             beguiled and demoralized that cannot trouble.
           </p>

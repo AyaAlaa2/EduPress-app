@@ -29,7 +29,7 @@ const BlogPage = () => {
   return (
     <div className="min-h-screen">
       <BreadCrumb href={href} />
-      <div className="max-w-5xl mx-auto px-4 lg:px-6 py-8">
+      <div className="max-w-6xl mx-auto px-4 lg:px-6 py-8">
         <div className="flex flex-col lg:flex-row gap-10">
           <div className="w-full lg:w-3/4">
             <HeaderOfLists

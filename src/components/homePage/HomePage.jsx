@@ -14,7 +14,7 @@ const HomePage = () => {
   return (
     <>
       <Hero />
-      <div className="flex flex-col gap-[90px] items-start justify-center px-5 sm:px-10 md:px-33">
+      <div className="flex flex-col gap-[50px] md:gap-[90px] items-start justify-center px-7 sm:px-15 md:px-30">
         <TopCategories />
         <Featured />
         <Adv />

@@ -11,7 +11,7 @@ const CourseCard = ({ course }) => {
   const href = `/course/${course.id + " " + course.title}`;
   const oldPrice = course.oldPrice ?? 29.0;
   return (
-    <div className="overflow-hidden rounded-3xl shadow-sm border bg-white flex flex-col hover:shadow-xl transition-all duration-300 hover:-translate-y-4 cursor-pointer group">
+    <div className="overflow-hidden rounded-[20px] shadow-sm border bg-white flex flex-col hover:shadow-xl transition-all duration-300 hover:-translate-y-4 cursor-pointer group">
       <Link to={href}>
         <div className="relative h-40 sm:h-48 w-full">
           <img

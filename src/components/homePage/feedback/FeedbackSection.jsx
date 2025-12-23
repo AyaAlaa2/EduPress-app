@@ -5,10 +5,10 @@ const FeedbackSection = () => {
   return (
     <div className="flex flex-col items-center justify-center w-full gap-[50px]">
       <div className="flex flex-col items-center justify-center gap-3">
-        <h2 className="font-[Exo] text-[32px] font-semibold">
+        <h2 className="font-[Exo] text-[24px] md:text-[32px] font-semibold">
           Student Feedbacks
         </h2>
-        <p className="text-[18px] leading-[150%] text-[#555555]">
+        <p className="text-[14px] md:text-[18px] leading-[150%] text-[#555555]">
           What Students Say About Academy LMS
         </p>
       </div>
