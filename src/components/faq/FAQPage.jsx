@@ -13,7 +13,7 @@ const FAQPage = () => {
     <div className="min-h-screen bg-white">
       <BreadCrumb href={href} />
 
-      <div className="max-w-5xl mx-auto px-4 py-12">
+      <div className="max-w-6xl mx-auto px-4 py-12">
         <h1 className="text-3xl font-bold mb-10">FAQs</h1>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">

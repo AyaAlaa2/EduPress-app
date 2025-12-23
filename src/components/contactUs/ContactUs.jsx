@@ -12,8 +12,8 @@ const ContactUs = () => {
     <Card className="w-full bg-white shadow-none border-0 py-0">
       <BreadCrumb href={href} />
 
-      <CardContent className="p-6 md:p-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center px-5 md:px-15 lg:px-40">
+      <CardContent className="max-w-6xl mx-auto px-10 md:px-20 lg:px-3 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <InformationSide />
           <MapSide />
         </div>
@@ -21,6 +21,7 @@ const ContactUs = () => {
       <CommentForm
         title="Leave a Comment"
         subtitle="Your email address will not be published. Required fields are marked *"
+        className="px-10 md:px-20 lg:px-20"
       />
     </Card>
   );
