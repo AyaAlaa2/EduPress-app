@@ -1,5 +1,5 @@
 import React from "react";
-import { courseCategories, courses } from "../../Data/data";
+import { courseCategories, courses } from "../../data/data";
 
 const categoryCounts = courses.reduce((acc, course) => {
   acc[course.category] = (acc[course.category] || 0) + 1;
@@ -8,24 +8,24 @@ const categoryCounts = courses.reduce((acc, course) => {
 
 const FilterCategory = ({ selectedCategories, onToggleCategory }) => {
   return (
-    <section>
-      <h2 className="font-semibold mb-4 text-[13px] uppercase tracking-wide">
+    <section className="flex flex-col gap-[20px]">
+      <h2 className="font-[Exo] font-semibold text-[20px] uppercase tracking-wide">
         Course Category
       </h2>
-      <ul className="space-y-2">
+      <ul className="w-full flex flex-col gap-[10px] items-start ">
         {courseCategories.map((cat) => (
           <li
             key={cat}
-            className="flex items-center justify-between text-[13px] text-gray-700"
+            className="w-full flex items-center justify-between text-[13px] taxt-[#555555]"
           >
-            <div className="flex items-center gap-2">
+            <div className="flex items-center justify-between gap-[7px]  ">
               <input
                 type="checkbox"
-                className="h-3 w-3 border-gray-300 rounded focus:ring-0"
+                className="h-3 w-3 border-gray-300 rounded focus:ring-0 "
                 checked={selectedCategories.includes(cat)}
                 onChange={() => onToggleCategory(cat)}
               />
-              <span>{cat}</span>
+              <span className="text-[#555555]">{cat}</span>
             </div>
             <span className="text-gray-400 text-[11px]">
               {categoryCounts[cat] || 0}

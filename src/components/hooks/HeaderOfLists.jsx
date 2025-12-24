@@ -14,8 +14,8 @@ const HeaderOfLists = ({
   gridCount,
 }) => {
   return (
-    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-6">
-      <h1 className="text-[30px] font-semibold font-[Exo] leading-[120%]">
+    <div className="w-full flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-6">
+      <h1 className="text-[20px] md:text-[30px] font-semibold font-[Exo] leading-[120%]">
         {title}
       </h1>
 

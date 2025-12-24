@@ -1,5 +1,5 @@
 import React from "react";
-import { courses } from "../../Data/data";
+import { courses } from "../../data/data";
 
 const priceCounts = courses.reduce(
   (acc, course) => {
@@ -15,15 +15,15 @@ const priceOptions = ["All", "Free", "Paid"];
 
 const FilterPrice = ({ priceFilter, onChangePrice }) => {
   return (
-    <section>
-      <h2 className="font-semibold mb-4 text-[13px] uppercase tracking-wide">
+    <section className="flex flex-col gap-[20px]">
+      <h2 className="font-[Exo] font-semibold text-[20px] uppercase tracking-wide">
         Price
       </h2>
-      <ul className="space-y-2">
+      <ul className="w-full flex flex-col gap-[10px] items-start ">
         {priceOptions.map((label) => (
           <li
             key={label}
-            className="flex items-center justify-between text-[13px] text-gray-700"
+            className="w-full flex items-center justify-between text-[13px] text-gray-700"
           >
             <div className="flex items-center gap-2">
               <input
@@ -32,7 +32,7 @@ const FilterPrice = ({ priceFilter, onChangePrice }) => {
                 checked={priceFilter === label}
                 onChange={() => onChangePrice(label)}
               />
-              <span>{label}</span>
+              <span className="text-[#555555]">{label}</span>
             </div>
             <span className="text-gray-400 text-[11px]">
               {priceCounts[label]}

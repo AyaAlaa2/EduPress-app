@@ -1,8 +1,9 @@
 import React from "react";
-import { courses } from "../../Data/data";
+import { courses } from "../../data/data";
+import { FaStar } from "react-icons/fa6";
 
 const ratingCounts = courses.reduce((acc, course) => {
-  const stars = Math.floor(course.rating); // 4.7 -> 4
+  const stars = Math.floor(course.rating);
   acc[stars] = (acc[stars] || 0) + 1;
   return acc;
 }, {});
@@ -11,15 +12,15 @@ const ratingOptions = [5, 4, 3, 2, 1];
 
 const FilterReview = ({ minRating, onChangeRating }) => {
   return (
-    <section>
-      <h2 className="font-semibold mb-4 text-[13px] uppercase tracking-wide">
+    <section className="flex flex-col gap-[20px]">
+      <h2 className="font-[Exo] font-semibold text-[20px] uppercase tracking-wide">
         Review
       </h2>
-      <ul className="space-y-1">
+      <ul className="w-full flex flex-col gap-[10px] items-start ">
         {ratingOptions.map((stars) => (
           <li
             key={stars}
-            className="flex items-center justify-between text-[13px] text-gray-700"
+            className="w-full flex items-center justify-between text-[13px] text-gray-700"
           >
             <div className="flex items-center gap-2">
               <input
@@ -34,7 +35,7 @@ const FilterReview = ({ minRating, onChangeRating }) => {
                     key={i}
                     className={i < stars ? "text-yellow-400" : "text-gray-300"}
                   >
-                    ★
+                    <FaStar size={12} />
                   </span>
                 ))}
               </div>

@@ -7,6 +7,9 @@ import { UseSearchPagination } from "../hooks/useSearchPagination";
 import { UseCourseFilters } from "../hooks/useCourseFilters";
 import { Pagination } from "@mantine/core";
 import BreadCrumb from "../hooks/BreadCrumb";
+import { SlidersHorizontal } from "lucide-react";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import MobileSidebarCourses from "./sidebar/MobileSidebarCourses";
 
 const CoursesPage = () => {
   const {
@@ -49,14 +52,33 @@ const CoursesPage = () => {
       <div className="max-w-6xl mx-auto px-4 lg:px-6 py-8">
         <div className="flex flex-col lg:flex-row gap-10">
           <div className="w-full lg:w-3/4">
-            <HeaderOfLists
-              title="All Courses"
-              searchPlaceholder="Search ..."
-              searchValue={searchInput}
-              onSearchChange={handleSearchChange}
-              changeGrid={changeGrid}
-              gridCount={gridCount}
-            />
+            <div className="w-full flex justify-center items-center gap-10">
+              <HeaderOfLists
+                title="All Courses"
+                searchPlaceholder="Search ..."
+                searchValue={searchInput}
+                onSearchChange={handleSearchChange}
+                changeGrid={changeGrid}
+                gridCount={gridCount}
+              />
+              <div className="flex lg:hidden lg:top-5 self-end">
+                <div className="w-full">
+                  <MobileSidebarCourses
+                    selectedCategories={selectedCategories}
+                    onToggleCategory={handleToggleCategory}
+                    selectedInstructors={selectedInstructors}
+                    onToggleInstructor={handleToggleInstructor}
+                    priceFilter={priceFilter}
+                    onChangePrice={handleChangePrice}
+                    minRating={minRating}
+                    onChangeRating={handleChangeRating}
+                    selectedLevels={selectedLevels}
+                    onToggleLevel={handleToggleLevel}
+                  />
+                </div>
+              </div>
+            </div>
+
             <CourseList courses={visibleCourses} gridCount={gridCount} />
 
             <div className="flex justify-center mt-6">
@@ -73,20 +95,21 @@ const CoursesPage = () => {
             </div>
           </div>
 
-          {/* RIGHT: sidebar */}
-          <div className="w-full lg:w-1/4 lg:sticky lg:top-5 self-start">
-            <SidebarCourses
-              selectedCategories={selectedCategories}
-              onToggleCategory={handleToggleCategory}
-              selectedInstructors={selectedInstructors}
-              onToggleInstructor={handleToggleInstructor}
-              priceFilter={priceFilter}
-              onChangePrice={handleChangePrice}
-              minRating={minRating}
-              onChangeRating={handleChangeRating}
-              selectedLevels={selectedLevels}
-              onToggleLevel={handleToggleLevel}
-            />
+          <div className="hidden lg:flex w-full lg:w-1/4 lg:sticky lg:top-5 self-start">
+            <div className="w-full">
+              <SidebarCourses
+                selectedCategories={selectedCategories}
+                onToggleCategory={handleToggleCategory}
+                selectedInstructors={selectedInstructors}
+                onToggleInstructor={handleToggleInstructor}
+                priceFilter={priceFilter}
+                onChangePrice={handleChangePrice}
+                minRating={minRating}
+                onChangeRating={handleChangeRating}
+                selectedLevels={selectedLevels}
+                onToggleLevel={handleToggleLevel}
+              />
+            </div>
           </div>
         </div>
       </div>

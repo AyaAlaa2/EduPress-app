@@ -1,5 +1,5 @@
 import React from "react";
-import { courseLevels, courses } from "../../Data/data";
+import { courseLevels, courses } from "../../data/data";
 
 const levelCounts = courses.reduce((acc, course) => {
   acc[course.level] = (acc[course.level] || 0) + 1;
@@ -8,15 +8,15 @@ const levelCounts = courses.reduce((acc, course) => {
 
 const FilterLevel = ({ selectedLevels, onToggleLevel }) => {
   return (
-    <section>
-      <h2 className="font-semibold mb-4 text-[13px] uppercase tracking-wide">
+    <section className="flex flex-col gap-[20px]">
+      <h2 className="font-[Exo] font-semibold text-[20px] uppercase tracking-wide">
         Level
       </h2>
-      <ul className="space-y-2">
+      <ul className="w-full flex flex-col gap-[10px] items-start ">
         {courseLevels.map((level) => (
           <li
             key={level}
-            className="flex items-center justify-between text-[13px] text-gray-700"
+            className="w-full flex items-center justify-between text-[13px] text-gray-700"
           >
             <div className="flex items-center gap-2">
               <input
@@ -25,7 +25,7 @@ const FilterLevel = ({ selectedLevels, onToggleLevel }) => {
                 checked={selectedLevels.includes(level)}
                 onChange={() => onToggleLevel(level)}
               />
-              <span>{level}</span>
+              <span className="text-[#555555]">{level}</span>
             </div>
             <span className="text-gray-400 text-[11px]">
               {levelCounts[level] || 0}
