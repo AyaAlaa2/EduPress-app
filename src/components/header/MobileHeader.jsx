@@ -1,22 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { headerLinks } from "./headerLinks";
 import { Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { NavLink } from "react-router-dom";
 
 const MobileHeader = () => {
+  const [open, setOpen] = useState(false);
   return (
-    <Sheet>
+    <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger className="flex lg:hidden py-[24px]">
         <Menu size={24} />
       </SheetTrigger>
 
-      <SheetContent side="right" className="w-full md:w-[360px]">
+      <SheetContent side="right" className="w-[60%] md:w-[360px]">
         <div className="flex flex-col text-[16px] font-semibold py-[48px] font-[Exo]">
           {headerLinks.map((link) => (
             <NavLink
               key={link.href}
               to={link.href}
+              onClick={() => setOpen(!open)}
               className={({ isActive }) =>
                 `px-[20px] py-[24px] hover:text-primary ${
                   isActive ? "bg-[#F5F5F5] text-primary" : ""

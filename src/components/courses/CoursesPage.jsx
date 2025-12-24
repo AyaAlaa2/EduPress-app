@@ -44,7 +44,7 @@ const CoursesPage = () => {
   const href = [{ title: "Homepage", href: "/" }, { title: "Courses" }];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen mt-16">
       <BreadCrumb href={href} />
       <div className="max-w-6xl mx-auto px-4 lg:px-6 py-8">
         <div className="flex flex-col lg:flex-row gap-10">

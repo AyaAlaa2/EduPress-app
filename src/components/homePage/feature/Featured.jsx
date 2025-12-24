@@ -1,11 +1,15 @@
 import React from "react";
-import Header from "./Header";
 import FeaturedContainer from "./FeaturedContainer";
+import HeaderOfHomeSection from "@/components/hooks/HeaderOfHomeSection";
 
 const Featured = () => {
   return (
     <div className="mt-[90px] w-full flex flex-col gap-[50px]">
-      <Header />
+      <HeaderOfHomeSection
+        title="Featured Courses"
+        subTitle="Explore our Popular Categories"
+        buttonText="All categories"
+      />
       <FeaturedContainer />
     </div>
   );
