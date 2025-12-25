@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import { headerLinks } from "./headerLinks";
 import { Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const MobileHeader = () => {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
   return (
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger className="flex lg:hidden py-[24px]">
@@ -29,8 +30,11 @@ const MobileHeader = () => {
             </NavLink>
           ))}
 
-          <button className="mt-[20px] text-start hover:text-orange-500 px-[20px]">
-            Login / Register
+          <button
+            onClick={() => navigate("/login")}
+            className="cursor-pointer mt-[20px] text-start hover:text-orange-500 px-[20px]"
+          >
+            <p className="font-medium text-[18px]">Login / Register</p>
           </button>
         </div>
       </SheetContent>

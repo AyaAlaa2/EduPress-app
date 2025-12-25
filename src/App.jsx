@@ -12,10 +12,14 @@ import ContactUs from "./components/contactUs/ContactUs";
 import Header from "./components/header/Header.jsx";
 import Footer from "./components/footer/Footer";
 import SearchResult from "./components/search/SearchResult";
+import LoginPage from "./components/registerPages/LoginPage";
+import Signup from "./components/registerPages/Signup";
+import { Toaster } from "react-hot-toast";
 
 const App = () => {
   return (
     <>
+      <Toaster position="top-center" reverseOrder={false} />
       <ScrollToTop />
       <Header />
       <Routes>
@@ -27,6 +31,8 @@ const App = () => {
         <Route path="/search/:query" element={<SearchResult />} />
         <Route path="/faq" element={<FAQPage />} />
         <Route path="/contactUs" element={<ContactUs />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<Signup />} />
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />

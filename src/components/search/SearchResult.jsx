@@ -3,6 +3,7 @@ import { posts, courses } from "../data/data";
 import CourseCard from "../courses/CourseCard";
 import { UseSearchPagination } from "../hooks/useSearchPagination";
 import { Pagination } from "@mantine/core";
+import BreadCrumb from "../hooks/BreadCrumb";
 
 const SearchResult = () => {
   const { query } = useParams();
@@ -37,8 +38,12 @@ const SearchResult = () => {
     }
   );
 
+  const href = [{ title: "Homepage", href: "/" }, { title: `${query}` }];
+
   return (
     <div className="min-h-[300px] mt-16">
+      <BreadCrumb href={href} />
+
       <div className="max-w-6xl mx-auto px-4 lg:px-6 pt-8">
         <div className="flex flex-col gap-5">
           <h2 className="text-2xl">

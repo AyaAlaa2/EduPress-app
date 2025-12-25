@@ -1,9 +1,10 @@
 import React from "react";
 import search from "./icons/search.svg";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { headerLinks } from "./headerLinks";
 
 const DesktopHeader = ({ setShowSearch, showSearch }) => {
+  const navigate = useNavigate();
   return (
     <div>
       <div className="w-full flex items-center justify-between gap-35">
@@ -24,7 +25,10 @@ const DesktopHeader = ({ setShowSearch, showSearch }) => {
         </nav>
 
         <div className="hidden lg:flex items-center gap-[20px]  ">
-          <button className=" hover:text-orange-500">
+          <button
+            onClick={() => navigate("/login")}
+            className="cursor-pointer hover:text-orange-500"
+          >
             <p className="font-medium text-[18px]">Login / Register</p>
           </button>
           <button onClick={() => setShowSearch(!showSearch)}>
