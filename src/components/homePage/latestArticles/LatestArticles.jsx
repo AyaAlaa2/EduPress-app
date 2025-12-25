@@ -9,6 +9,7 @@ const LatestArticles = () => {
         title="Latest Articles"
         subTitle="Explore our Popular Categories"
         buttonText="All articles"
+        buttonLink="blog"
       />
       <ArticelsContainer />
     </div>

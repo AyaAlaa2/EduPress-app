@@ -10,7 +10,7 @@ const FAQPage = () => {
   const href = [{ title: "Homepage", href: "/" }, { title: "FAQ" }];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white mt-16">
       <BreadCrumb href={href} />
 
       <div className="max-w-6xl mx-auto px-4 py-12">

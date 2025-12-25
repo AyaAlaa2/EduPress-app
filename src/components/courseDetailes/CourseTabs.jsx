@@ -38,16 +38,13 @@ const CourseTabs = ({ course }) => {
 
   return (
     <div className="flex w-full flex-col border border-1 rounded-lg overflow-hidden">
-      <Tabs
-        defaultValue="Overview"
-        className="gap-15 sm:gap-15 md:gap-3 border-0"
-      >
+      <Tabs defaultValue="Overview" className="gap-12 md:gap-2 border-0">
         <TabsList className="w-full flex flex-wrap text-[15px] sm:text-[16px] md:text-[18px] font-semibold gap-0 sm:gap-0 bg-white p-0">
           {tabs.map((item, index) => (
             <TabsTrigger
               value={item.value}
               key={index}
-              className="p-6 data-[state=active]:bg-[#F5F5F5] data-[state=active]:text-primary data-[state=active]:border-none  data-[state=active]:rounded-none "
+              className="p-5 data-[state=active]:bg-[#F5F5F5] data-[state=active]:text-primary data-[state=active]:border-none data-[state=active]:rounded-none "
             >
               {item.label}
             </TabsTrigger>

@@ -9,10 +9,10 @@ const ContactUs = () => {
   const href = [{ title: "Homepage", href: "/" }, { title: "Contact Us" }];
 
   return (
-    <Card className="w-full bg-white shadow-none border-0 py-0">
+    <Card className="w-full bg-white shadow-none border-0 py-0 mt-16">
       <BreadCrumb href={href} />
 
-      <CardContent className="max-w-6xl mx-auto px-10 md:px-20 lg:px-3 py-12">
+      <CardContent className="max-w-6xl mx-auto px-10 md:px-20 lg:px-3 py-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <InformationSide />
           <MapSide />

@@ -9,6 +9,7 @@ const Featured = () => {
         title="Featured Courses"
         subTitle="Explore our Popular Categories"
         buttonText="All categories"
+        buttonLink="courses"
       />
       <FeaturedContainer />
     </div>
