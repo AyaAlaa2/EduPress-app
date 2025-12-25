@@ -7,8 +7,6 @@ import { UseSearchPagination } from "../hooks/useSearchPagination";
 import { UseCourseFilters } from "../hooks/useCourseFilters";
 import { Pagination } from "@mantine/core";
 import BreadCrumb from "../hooks/BreadCrumb";
-import { SlidersHorizontal } from "lucide-react";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import MobileSidebarCourses from "./sidebar/MobileSidebarCourses";
 
 const CoursesPage = () => {

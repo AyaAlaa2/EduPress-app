@@ -35,12 +35,12 @@ const Curriculum = ({ lessons }) => {
                 data-[state=open]:rotate-90
               "
               />
-              <span className="font-semibold text-[12px] md:text-[16px]">
+              <span className="font-semibold text-[18px]">
                 {lesson.lessonName}
               </span>
             </div>
 
-            <div className="text-[12px] md:text-[16px] text-[#555555] flex gap-5">
+            <div className="text-[16px] text-[#555555] flex gap-5">
               <span>{lesson.lessonsNumber} Lessons</span>
               <span>{lesson.lessonsDuration} Mins</span>
             </div>
@@ -54,7 +54,7 @@ const Curriculum = ({ lessons }) => {
               >
                 <div className="flex items-center gap-[8px]">
                   <img src={lessonIcon} alt="l" />
-                  <span className="text-[12px] md:text-[16px]">
+                  <span className="text-[14px] md:text-[17px]">
                     {item.title}
                   </span>
                 </div>

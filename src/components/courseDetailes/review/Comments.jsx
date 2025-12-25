@@ -21,10 +21,10 @@ const Comments = ({ displayReviews }) => {
           </div>
 
           <div className="flex flex-col items-start gap-[8px] justify-between ">
-            <span className="font-semibold font-[Exo] text-[16px]">
+            <span className="font-semibold font-[Exo] text-[14px] md:text-[16px]">
               {item.name}
             </span>
-            <p className="text-[#555555] text-[16px] leading-[150%]">
+            <p className="text-[#555555] text-[14px] md:text-[16px] leading-[150%]">
               {item.comment}
             </p>
             <button className="text-[16px] font-medium cursor-pointer flex gap-2 items-center">

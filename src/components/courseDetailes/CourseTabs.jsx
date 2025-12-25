@@ -38,13 +38,16 @@ const CourseTabs = ({ course }) => {
 
   return (
     <div className="flex w-full flex-col border border-1 rounded-lg overflow-hidden">
-      <Tabs defaultValue="Overview" className="gap-0 overflow-hidden border-0 ">
-        <TabsList className="w-full flex flex-wrap text-[12px] sm:text-[16px] font-semibold gap-0 sm:gap-0 bg-white p-0">
+      <Tabs
+        defaultValue="Overview"
+        className="gap-15 sm:gap-15 md:gap-3 border-0"
+      >
+        <TabsList className="w-full flex flex-wrap text-[15px] sm:text-[16px] md:text-[18px] font-semibold gap-0 sm:gap-0 bg-white p-0">
           {tabs.map((item, index) => (
             <TabsTrigger
               value={item.value}
               key={index}
-              className="data-[state=active]:bg-[#F5F5F5] data-[state=active]:text-primary data-[state=active]:border-none  data-[state=active]:rounded-none "
+              className="p-6 data-[state=active]:bg-[#F5F5F5] data-[state=active]:text-primary data-[state=active]:border-none  data-[state=active]:rounded-none "
             >
               {item.label}
             </TabsTrigger>
@@ -52,7 +55,7 @@ const CourseTabs = ({ course }) => {
         </TabsList>
         {tabs.map((tab, index) => (
           <TabsContent value={tab.value} key={index}>
-            <Card className="bg-[#F5F5F5] p-[15px] md:p-[30px] rounded-none border-none">
+            <Card className="bg-[#F5F5F5] p-[20px] md:p-[30px] rounded-none border-none">
               {tab.component}
             </Card>
           </TabsContent>

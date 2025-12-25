@@ -11,6 +11,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import ContactUs from "./components/contactUs/ContactUs";
 import Header from "./components/header/Header.jsx";
 import Footer from "./components/footer/Footer";
+import SearchResult from "./components/search/SearchResult";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
         <Route path="/blog/:slug" element={<BlogDetailsPage />} />
         <Route path="/courses" element={<CoursesPage />} />
         <Route path="/course/:courseId" element={<CourseDetailesPage />} />
+        <Route path="/search/:query" element={<SearchResult />} />
         <Route path="/faq" element={<FAQPage />} />
         <Route path="/contactUs" element={<ContactUs />} />
         <Route path="*" element={<Error />} />
