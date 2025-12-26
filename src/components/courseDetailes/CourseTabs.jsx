@@ -38,7 +38,10 @@ const CourseTabs = ({ course }) => {
 
   return (
     <div className="flex w-full flex-col border border-1 rounded-lg overflow-hidden">
-      <Tabs defaultValue="Overview" className="gap-12 md:gap-2 border-0">
+      <Tabs
+        defaultValue="Overview"
+        className="gap-15 md:gap-3 border-0"
+      >
         <TabsList className="w-full flex flex-wrap text-[15px] sm:text-[16px] md:text-[18px] font-semibold gap-0 sm:gap-0 bg-white p-0">
           {tabs.map((item, index) => (
             <TabsTrigger

@@ -23,7 +23,7 @@ const Header = () => {
 
   return (
     <header className="border-b bg-white fixed top-0 w-full z-3">
-      <div className="w-full container mx-auto flex items-between md:items-center justify-around px-10">
+      <div className="w-full container mx-auto flex items-between md:items-center justify-between px-5 lg:justify-around md:px-0">
         <Link to="/" className="flex gap-[8px] items-center">
           <img src={logo} alt="logo" />
           <p className="font-[Exo] text-[28px] font-bold">EduPress</p>

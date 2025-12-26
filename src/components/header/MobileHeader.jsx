@@ -31,7 +31,10 @@ const MobileHeader = () => {
           ))}
 
           <button
-            onClick={() => navigate("/login")}
+            onClick={() => {
+              setOpen(!open);
+              navigate("/login");
+            }}
             className="cursor-pointer mt-[20px] text-start hover:text-orange-500 px-[20px]"
           >
             <p className="font-medium text-[18px]">Login / Register</p>
