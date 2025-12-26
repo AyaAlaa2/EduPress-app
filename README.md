@@ -19,14 +19,14 @@ The platform aims to provide an intuitive and engaging online learning experienc
 - Build a fully responsive e-learning front-end application using **React.js** (Vite) and **Tailwind CSS**.
 - Design an intuitive user interface that allows users to browse and explore courses smoothly.
 - Implement course listing with detailed views including:
-  ### Course description
-  ### Category
-  ### Instructor informatio
+ - **Course description**
+ - **Category**
+ - **Instructor information**
 - Create dedicated pages to display **instructor details**.
 - Implement a client-side search functionality that allows users to search by:
-  ### Course name
-  ### Instructor name
-  ### Course category
+  - **Course name**
+  - **Instructor name**
+  - **Course category**
 - Develop **login and signup interfaces** for UI/UX purposes only (no authentication logic or database).
 - Ensure a clean, modern, and responsive design optimized for all screen sizes.
 - Apply best practices in component structure, routing, and state management on the front end.
@@ -41,15 +41,16 @@ The platform aims to provide an intuitive and engaging online learning experienc
 - **Home Page** –Displays an overview of the platform, featured courses, and highlights key sections.
 - **Courses Page** – Lists all available courses with a **side filtering panel** to filter courses by category or other criteria.
 - **Course Details Page** – Shows detailed information about a selected course, including:
-    ### Course description
-    ### Category
-    ### Instructor information
+
+  - **Course description**
+  - **Category**
+  - **Instructor information**
 
 - **Blog Page** – Displays educational articles with a side filtering panel for categories or topics.
 - **Search Results Page** - Allows users to view search results based on:
-    ### Course name
-    ### Instructor name
-    ### Course category
+  - **Course name**
+  - **Instructor name**
+  - **Course category**
 
 - **FAQ Page** -Provides answers to frequently asked questions about the platform.
 - **Contact Page** - Contains a contact form and basic information for user inquiries.
@@ -65,9 +66,9 @@ The platform aims to provide an intuitive and engaging online learning experienc
 - View detailed course information including description, category, and instructor details.
 - Dedicated instructor pages displaying instructor information and related courses.
 - Client-side search functionality that allows searching by:
-   ### Course name
-   ### Instructor name
-   ### Course category
+  - **Course name**
+  - **Instructor name**
+  - **Course category**
 - Blog section with categorized educational articles.
 - Fully responsive design optimized for desktop, tablet, and mobile screens.
 - Smooth page navigation using React Router.
