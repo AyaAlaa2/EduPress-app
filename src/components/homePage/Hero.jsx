@@ -10,7 +10,7 @@ const Hero = () => {
       <img src={img2} className="absolute md:hidden top-0 right-0 w-120 " />
       <div className="absolute md:hidden top-0 left-0 w-full h-full bg-[#F0F0F0]/10 z-0"></div>
 
-      <div className="absolute md:relative  w-120 inset-0 bg-opacity-50 flex flex-col justify-center items-center md:items-start gap-10 px-1">
+      <div className="w-120 inset-0 bg-opacity-50 flex flex-col justify-center items-center md:items-start gap-10 px-1">
         <div>
           <p className="text-center md:text-start font-semibold text-[40px] md:text-[48px] font-[Exo] leading-[150%]">
             Build Skills with Online Course
