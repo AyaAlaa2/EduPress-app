@@ -19,9 +19,9 @@ The platform aims to provide an intuitive and engaging online learning experienc
 - Build a fully responsive e-learning front-end application using **React.js** (Vite) and **Tailwind CSS**.
 - Design an intuitive user interface that allows users to browse and explore courses smoothly.
 - Implement course listing with detailed views including:
- - **Course description**
- - **Category**
- - **Instructor information**
+   - **Course description**
+   - **Category**
+   - **Instructor information**
 - Create dedicated pages to display **instructor details**.
 - Implement a client-side search functionality that allows users to search by:
   - **Course name**
