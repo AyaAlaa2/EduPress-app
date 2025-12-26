@@ -10,7 +10,7 @@ The platform aims to provide an intuitive and engaging online learning experienc
 ## Team Members
 
 - [Aya Alaa](https://github.com/AyaAlaa2)
-- [Eslam Amer](https://githup.com/Eslam6104)
+- [Eslam Amer](https://github.com/Eslam6104)
 
 ---
 
