@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { buildBlogSlug } from "../Utils/slug";
+import { buildBlogSlug } from "../utils/slug";
 const BlogNavCard = ({ post, type = "prev" }) => {
   if (!post) {
     return (
